@@ -580,15 +580,15 @@ ul { list-style: none; }
 }
 @media (max-width: 880px) {
   .nav { display: none; }
-  .menu-toggle { display: block; order: 3; }
-  /* Two-row header: logos full width on top, language + menu below */
-  .nav-inner { flex-wrap: wrap; row-gap: 14px; }
+  .menu-toggle { display: block; order: 3; margin-right: auto; }
+  /* Two-row header: logos full width on top, language + menu centred below */
+  .nav-inner { flex-wrap: wrap; row-gap: 16px; column-gap: 16px; }
   .brand-lockup { order: 1; flex: 1 1 100%; justify-content: space-between; gap: 12px; }
   .brand-div { display: none; }
   .brand-logo { height: 30px; }
   .footer-logo { height: 30px; }
   .partner-logo, .partner img { height: 27px; }
-  .lang-switch { order: 2; margin-left: 0; }
+  .lang-switch { order: 2; margin-left: auto; }
   .about-grid { grid-template-columns: 1fr; }
   .about-media { max-width: 560px; }
   .about-badge { right: 16px; }

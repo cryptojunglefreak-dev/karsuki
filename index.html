@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <title>KARSUKI, Premium Steel Body Panels for Subaru Icons | Official Distributor for Asia</title>
+  <meta name="description" content="KARSUKI is the official Asia distributor of premium steel body panels manufactured by Zeton Garage for the Subaru Impreza WRC and Subaru 22B Coupe. Restoration-quality fenders, quarter panels, bumpers, side skirts and spoilers." />
+  <meta name="keywords" content="Subaru 22B, Subaru WRC, Impreza, steel body panels, Zeton Garage, front fenders, rear quarter panels, restoration, Asia distributor, KARSUKI" />
+  <meta name="author" content="KARSUKI" />
+  <link rel="canonical" href="https://karsuki.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="KARSUKI, Premium Steel Body Panels for Subaru Icons" />
+  <meta property="og:description" content="Official Asia distributor of Zeton Garage premium steel body panels for the Subaru Impreza WRC and 22B Coupe." />
+  <meta property="og:image" content="https://www.zetongaraz.com/wp-content/uploads/2025/06/awr.jpg" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Chakra+Petch:wght@600;700&family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KARSUKI",
+    "description": "Official Asia distributor of premium steel body panels manufactured by Zeton Garage for the Subaru Impreza WRC and Subaru 22B Coupe.",
+    "areaServed": "Asia",
+    "brand": "Zeton Garage",
+    "address": { "@type": "PostalAddress", "addressCountry": "Thailand" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== Zeton Garaż logo (manufacturer) — inline vector, reused via <use> ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="zeton-logo" viewBox="0 0 306 56">
+      <g fill="none" stroke="currentColor" stroke-width="8.5" stroke-linecap="butt" stroke-linejoin="miter">
+        <path d="M12 9 H50" />
+        <path d="M12 9 V22" />
+        <path d="M50 9 L14 45" />
+        <path d="M14 45 H52" />
+        <path d="M52 45 V32" />
+      </g>
+      <text x="80" y="39.5" font-family="Poppins, Inter, sans-serif" font-weight="500" font-size="33" letter-spacing="0.4" fill="currentColor">żeton garaż</text>
+    </symbol>
+  </svg>
+
+  <!-- ===== Global ambient background (moves with mouse) ===== -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-img" id="ambientImg" style="background-image:url('KARSUKI/wrc-1.jpg'), url('https://www.zetongaraz.com/wp-content/uploads/2026/06/wrc-1.jpg');"></div>
+    <div class="ambient-grid"></div>
+    <div class="ambient-noise"></div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <div class="brand-lockup">
+        <a href="#hero" class="brand" aria-label="KARSUKI home">
+          <img class="brand-logo" src="KARSUKI/logo.png" alt="KARSUKI" width="1005" height="154" />
+          <span class="brand-sub">カースキ・スチール</span>
+        </a>
+        <span class="brand-div" aria-hidden="true"></span>
+        <a href="https://www.zetongarage.com" target="_blank" rel="noopener" class="partner" aria-label="Żeton Garaż, manufacturer">
+          <img class="partner-logo" src="https://www.zetongaraz.com/wp-content/uploads/2025/06/zetongarazlogo.png" onerror="this.onerror=null;this.src='KARSUKI/zetongarazlogo.png'" alt="Żeton Garaż" width="190" height="33" />
+        </a>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about" data-i18n="navAbout">About</a></li>
+          <li><a href="#products" data-i18n="navProducts">Products</a></li>
+          <li><a href="#why" data-i18n="navWhy">Why KARSUKI</a></li>
+          <li><a href="#gallery" data-i18n="navGallery">Gallery</a></li>
+          <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta magnetic" data-i18n="getQuote">Get a Quote</a>
+      </nav>
+
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Change language">
+          <span class="lang-flag" id="langFlag">🇬🇧</span>
+          <span class="lang-code" id="langCode">EN</span>
+          <svg class="lang-caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" /></svg>
+        </button>
+        <ul class="lang-menu" id="langMenu" role="listbox" aria-label="Language">
+          <li><button type="button" role="option" data-lang="en"><span class="lf">🇬🇧</span> English</button></li>
+          <li><button type="button" role="option" data-lang="ja"><span class="lf">🇯🇵</span> 日本語</button></li>
+          <li><button type="button" role="option" data-lang="zh"><span class="lf">🇨🇳</span> 中文</button></li>
+          <li><button type="button" role="option" data-lang="vi"><span class="lf">🇻🇳</span> Tiếng Việt</button></li>
+          <li><button type="button" role="option" data-lang="th"><span class="lf">🇹🇭</span> ไทย</button></li>
+          <li><button type="button" role="option" data-lang="ko"><span class="lf">🇰🇷</span> 한국어</button></li>
+        </ul>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <ul>
+        <li><a href="#about" data-i18n="navAbout">About</a></li>
+        <li><a href="#products" data-i18n="navProducts">Products</a></li>
+        <li><a href="#why" data-i18n="navWhy">Why KARSUKI</a></li>
+        <li><a href="#gallery" data-i18n="navGallery">Gallery</a></li>
+        <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary btn-block" data-i18n="contactKarsuki">Contact KARSUKI</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" id="heroBg" style="background-image:url('KARSUKI/subaru.jpg'), url('KARSUKI/wrc-1.jpg'), url('https://www.zetongaraz.com/wp-content/uploads/2026/06/wrc-1.jpg');"></div>
+      <div class="hero-overlay"></div>
+
+      <!-- Japanese vertical accent -->
+      <div class="jp-vertical" aria-hidden="true">高性能・鋼板 <span class="jp-red">本物</span></div>
+      <!-- technical corner marks -->
+      <span class="corner-mark tl" aria-hidden="true"></span>
+      <span class="corner-mark tr" aria-hidden="true"></span>
+
+      <div class="container hero-content">
+        <p class="eyebrow reveal"><span class="tick"></span><span data-i18n="heroEyebrow">Official Distributor for Asia</span></p>
+        <h1 class="hero-title reveal" data-i18n-html="heroTitle">
+          Premium Steel Body Panels<br />
+          <span class="accent-line">for Subaru Icons.</span>
+        </h1>
+        <p class="hero-sub reveal" data-i18n="heroSub">
+          Restoration-grade steel panels manufactured by Zeton Garage for the legendary
+          Subaru Impreza WRC and Subaru 22B Coupe.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#products" class="btn btn-primary magnetic" data-i18n="exploreProducts">Explore Products</a>
+          <a href="#contact" class="btn btn-ghost magnetic" data-i18n="contactUs">Contact Us</a>
+        </div>
+
+        <div class="hero-meta reveal" aria-hidden="true">
+          <span>01 · 製品</span><span class="dot"></span>
+          <span>0.8mm ZINCORE STEEL</span><span class="dot"></span>
+          <span>MADE FOR 22B · WRC</span>
+        </div>
+      </div>
+
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>SUBARU 22B COUPE</span><span class="sep">✕</span>
+          <span>IMPREZA WRC</span><span class="sep">✕</span>
+          <span>ZETON GARAGE</span><span class="sep">✕</span>
+          <span>0.8MM ZINCORE STEEL</span><span class="sep">✕</span>
+          <span>SUBARU 22B COUPE</span><span class="sep">✕</span>
+          <span>IMPREZA WRC</span><span class="sep">✕</span>
+          <span>ZETON GARAGE</span><span class="sep">✕</span>
+          <span>0.8MM ZINCORE STEEL</span><span class="sep">✕</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section" id="about">
+      <span class="section-index" aria-hidden="true">02 · 会社</span>
+      <div class="container about-grid">
+        <div class="about-media reveal tilt">
+          <img loading="lazy" decoding="async" width="1150" height="767"
+               src="KARSUKI/metalbodykit22b.jpg" data-remote="https://www.zetongaraz.com/wp-content/uploads/2025/06/metalbodykit22b.jpg"
+               alt="Complete Subaru 22B steel metal body kit by Zeton Garage" />
+          <div class="about-badge">
+            <span class="badge-num">0.8<small>mm</small></span>
+            <span class="badge-label">Zincore galvanized steel</span>
+          </div>
+          <span class="hinomaru" aria-hidden="true"></span>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow reveal"><span class="tick"></span><span data-i18n="aboutEyebrow">About KARSUKI</span></p>
+          <h2 class="section-title reveal" data-i18n="aboutTitle">Built for Subaru Purists</h2>
+          <p class="reveal" data-i18n="aboutP1">
+            KARSUKI supplies premium steel body panels manufactured by Zeton Garage for the
+            most iconic Subaru models ever built. Every panel is pressed from galvanized
+            sheet steel and shaped from precise scans of original cars.
+          </p>
+          <p class="reveal" data-i18n="aboutP2">
+            Our focus is providing authentic, restoration quality components for Subaru
+            enthusiasts across Asia. Every panel is engineered with hidden-flange welds and true
+            factory geometry, so a build looks and fits exactly as it should.
+          </p>
+          <ul class="about-stats reveal">
+            <li><strong data-count="2">0</strong><span data-i18n="statPlatforms">Icon platforms · 22B &amp; WRC</span></li>
+            <li><strong data-count="100" data-suffix="%">0</strong><span data-i18n="statSteel">Steel construction</span></li>
+            <li><strong data-count="0" data-text="Asia">Asia</strong><span data-i18n="statDist">Exclusive distribution</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products section" id="products">
+      <span class="section-index" aria-hidden="true">03 · 製品</span>
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal"><span class="tick"></span><span data-i18n="prodEyebrow">The Range</span></p>
+          <h2 class="section-title reveal" data-i18n="prodTitle">Steel Panels, Engineered to Fit</h2>
+          <p class="section-lead reveal" data-i18n="prodLead">
+            A complete metal body program for the Subaru 22B Coupe and WRC Coupe, pressed,
+            flanged and finished to restoration standard.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="product-card reveal tilt is-featured" data-open="wrc" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open WRC body kit gallery">
+            <div class="card-media">
+              <img loading="lazy" decoding="async" width="1150" height="767"
+                   src="KARSUKI/wrc-1.jpg" data-remote="https://www.zetongaraz.com/wp-content/uploads/2026/06/wrc-1.jpg"
+                   alt="Complete Subaru WRC steel body panel kit" />
+              <span class="card-badge"><span data-i18n="galleryWord">Gallery</span> · 34 <span data-i18n="photosWord">photos</span></span>
+            </div>
+            <div class="card-body">
+              <span class="card-index">01</span>
+              <h3>WRC Body Kit</h3>
+              <p data-i18n="prodWrcDesc">The complete WRC S5/6 metal body kit, a full widebody transformation in genuine pressed steel.</p>
+              <span class="card-cta"><span data-i18n="viewGallery">View kit &amp; gallery</span> <span aria-hidden="true">→</span></span>
+            </div>
+          </article>
+
+          <article class="product-card reveal tilt is-featured" data-open="kit22b" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open 22B body kit gallery">
+            <div class="card-media">
+              <img loading="lazy" decoding="async" width="1150" height="767"
+                   src="KARSUKI/metalbodykit22b.jpg" data-remote="https://www.zetongaraz.com/wp-content/uploads/2025/06/metalbodykit22b.jpg"
+                   alt="Subaru Impreza 22B complete metal body kit" />
+              <span class="card-badge"><span data-i18n="galleryWord">Gallery</span> · 28 <span data-i18n="photosWord">photos</span></span>
+            </div>
+            <div class="card-body">
+              <span class="card-index">02</span>
+              <h3>22B Body Kit</h3>
+              <p data-i18n="prod22bDesc">The complete pressed steel metal body kit, front fenders and rear quarters scanned from an original 22B.</p>
+              <span class="card-cta"><span data-i18n="viewGallery">View kit &amp; gallery</span> <span aria-hidden="true">→</span></span>
+            </div>
+          </article>
+
+          <article class="product-card reveal is-soon">
+            <div class="card-media soon-media">
+              <span class="soon-badge" data-i18n="comingSoon">Coming soon</span>
+              <span class="soon-text" data-i18n="soonBig">Coming Soon</span>
+              <span class="soon-jp" aria-hidden="true">近日公開</span>
+            </div>
+            <div class="card-body">
+              <span class="card-index">03</span>
+              <h3>22B Bumpers</h3>
+              <p data-i18n="prodBumpDesc">Front and rear pressed steel bumpers for the Subaru Impreza 22B, in development.</p>
+              <span class="card-cta soon" data-i18n="inDev">In development</span>
+            </div>
+          </article>
+
+          <article class="product-card reveal is-soon">
+            <div class="card-media soon-media">
+              <span class="soon-badge" data-i18n="comingSoon">Coming soon</span>
+              <span class="soon-text" data-i18n="soonBig">Coming Soon</span>
+              <span class="soon-jp" aria-hidden="true">近日公開</span>
+            </div>
+            <div class="card-body">
+              <span class="card-index">04</span>
+              <h3>22B Wing</h3>
+              <p data-i18n="prodWingDesc">The iconic 22B rear wing, formed in pressed steel, in development.</p>
+              <span class="card-cta soon" data-i18n="inDev">In development</span>
+            </div>
+          </article>
+
+          <article class="product-card reveal is-soon">
+            <div class="card-media soon-media">
+              <span class="soon-badge" data-i18n="comingSoon">Coming soon</span>
+              <span class="soon-text" data-i18n="soonBig">Coming Soon</span>
+              <span class="soon-jp" aria-hidden="true">近日公開</span>
+            </div>
+            <div class="card-body">
+              <span class="card-index">05</span>
+              <h3>22B Full Set</h3>
+              <p data-i18n="prodFullDesc">The full 22B metal program, every steel panel together with the bumpers in one kit.</p>
+              <span class="card-cta soon" data-i18n="inDev">In development</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY ===== -->
+    <section class="why section" id="why">
+      <span class="section-index" aria-hidden="true">04 · 理由</span>
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal"><span class="tick"></span><span data-i18n="whyEyebrow">Why KARSUKI</span></p>
+          <h2 class="section-title reveal" data-i18n="whyTitle">The Standard Purists Expect</h2>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 4v6c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3 data-i18n="whyT1">Official Distributor for Asia</h3>
+            <p data-i18n="whyD1">The authorised source for Zeton Garage steel panels across the region, genuine product, direct supply.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg>
+            </div>
+            <h3 data-i18n="whyT2">Premium Steel Construction</h3>
+            <p data-i18n="whyD2">0.8mm Zincore galvanized sheet steel, pressed not moulded, for authentic strength and finish.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+            </div>
+            <h3 data-i18n="whyT3">Precision Fitment</h3>
+            <p data-i18n="whyD3">Digitised from original cars with integrated flanges, so welds stay hidden and panels line up true.</p>
+          </article>
+
+          <article class="why-card reveal">
+            <div class="why-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.9 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.9-3.8-9S9.5 5.7 12 3z"/></svg>
+            </div>
+            <h3 data-i18n="whyT4">Worldwide Shipping</h3>
+            <p data-i18n="whyD4">Crated, protected and shipped to serious builders wherever the project lives.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery section" id="gallery">
+      <span class="section-index" aria-hidden="true">05 · 写真</span>
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal"><span class="tick"></span><span data-i18n="galleryEyebrow">Gallery</span></p>
+          <h2 class="section-title reveal" data-i18n="galleryTitle">Steel in the Metal</h2>
+          <p class="section-lead reveal" data-i18n="galleryLead">Real panels, real builds, from raw press to finished widebody.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="slideshow reveal" id="slideshow" aria-roledescription="carousel" aria-label="Steel builds slideshow">
+          <div class="slide-track" id="slideTrack"></div>
+          <div class="slide-vignette" aria-hidden="true"></div>
+          <span class="corner-mark tl small" aria-hidden="true"></span>
+          <span class="corner-mark br small" aria-hidden="true"></span>
+          <div class="slide-caption">
+            <span class="sc-index" id="slideCount">01 / 08</span>
+            <span class="sc-text" id="slideText"></span>
+          </div>
+          <button class="slide-nav prev" id="slidePrev" aria-label="Previous slide">‹</button>
+          <button class="slide-nav next" id="slideNext" aria-label="Next slide">›</button>
+          <div class="slide-dots" id="slideDots"></div>
+          <div class="slide-progress" id="slideProgress"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact section" id="contact">
+      <div class="section-video" id="bgVideos" aria-hidden="true">
+        <video class="bgv active" data-i="0" autoplay muted playsinline preload="auto" poster="KARSUKI/karsuki-poster.jpg">
+          <source src="KARSUKI/karsukivideo1-car.mp4" type="video/mp4" />
+        </video>
+        <video class="bgv" data-i="1" muted playsinline preload="auto">
+          <source src="KARSUKI/karsukivideo2.mp4" type="video/mp4" />
+        </video>
+        <div class="section-video-tint"></div>
+      </div>
+      <span class="section-index" aria-hidden="true">06 · 連絡</span>
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow reveal"><span class="tick"></span><span data-i18n="contactEyebrow">Contact</span></p>
+          <h2 class="section-title reveal" data-i18n="contactTitle">Start Your Build</h2>
+          <p class="reveal" data-i18n="contactP">
+            Tell us your platform and specification. We'll confirm availability, lead time and
+            shipping for premium Zeton Garage steel panels anywhere in Asia and beyond.
+          </p>
+
+          <ul class="contact-list reveal">
+            <li>
+              <span class="c-label" data-i18n="labelEmail">Email</span>
+              <a href="mailto:info@karsuki.com">info@karsuki.com</a>
+            </li>
+            <li>
+              <span class="c-label">WhatsApp</span>
+              <a href="https://wa.me/66843701699" target="_blank" rel="noopener">+66 84 370 1699</a>
+            </li>
+            <li>
+              <span class="c-label">Instagram</span>
+              <a href="https://instagram.com/karsukiworks" target="_blank" rel="noopener">@karsukiworks</a>
+            </li>
+            <li>
+              <span class="c-label" data-i18n="labelLocation">Location</span>
+              <span>Thailand</span>
+            </li>
+          </ul>
+
+          <a href="mailto:info@karsuki.com" class="btn btn-primary btn-lg reveal magnetic" data-i18n="contactKarsuki">Contact KARSUKI</a>
+        </div>
+
+        <aside class="contact-panel reveal" aria-label="Distribution highlights">
+          <span class="hinomaru small" aria-hidden="true"></span>
+          <h3 data-i18n="panelTitle">Official Asia Distribution</h3>
+          <p data-i18n="panelText">KARSUKI is the single point of supply for Zeton Garage steel panels across Asia.</p>
+          <div class="panel-rows">
+            <div><span data-i18n="rowPlatforms">Platforms</span><strong>22B · WRC</strong></div>
+            <div><span data-i18n="rowMaterial">Material</span><strong>0.8mm steel</strong></div>
+            <div><span data-i18n="rowFitment">Fitment</span><strong>Scan-accurate</strong></div>
+            <div><span data-i18n="rowShipping">Shipping</span><strong data-i18n="worldwide">Worldwide</strong></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand-lockup">
+          <img class="brand-logo footer-logo" src="KARSUKI/logo.png" alt="KARSUKI" width="1005" height="154" />
+          <span class="brand-div" aria-hidden="true"></span>
+          <a href="https://www.zetongarage.com" target="_blank" rel="noopener" class="partner" aria-label="Żeton Garaż, manufacturer">
+            <img class="partner-logo" src="https://www.zetongaraz.com/wp-content/uploads/2025/06/zetongarazlogo.png" onerror="this.onerror=null;this.src='KARSUKI/zetongarazlogo.png'" alt="Żeton Garaż" width="190" height="33" />
+          </a>
+        </div>
+        <p data-i18n="footerTagline">Official Distributor for Asia. Premium steel body panels by Zeton Garage for the Subaru Impreza WRC and 22B Coupe.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#products" data-i18n="navProducts">Products</a>
+        <a href="#why" data-i18n="navWhy">Why KARSUKI</a>
+        <a href="#gallery" data-i18n="navGallery">Gallery</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="footer-social" aria-label="Social links">
+        <a href="https://instagram.com/karsukiworks" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://wa.me/66843701699" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.5A9 9 0 1 1 21 12z"/><path d="M8.5 9c0 4 2.5 6.5 6.5 6.5.6 0 1.2-.6 1.2-1.2 0-.3-.7-1-1.3-1.2-.5-.2-.9.6-1.3.6-1 0-3-2-3-3 0-.4.8-.8.6-1.3-.2-.6-.9-1.3-1.2-1.3-.6 0-1.2.6-1.2 1.2z"/></svg>
+        </a>
+        <a href="mailto:info@karsuki.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> KARSUKI. All rights reserved.</p>
+      <p class="footer-fine">Panels manufactured by Zeton Garage. KARSUKI is the official Asia distributor.</p>
+    </div>
+  </footer>
+
+  <!-- ===== 22B KIT MODAL (description + gallery) ===== -->
+  <div class="modal" id="kitModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Metal Bodykit gallery">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="document">
+      <button class="modal-close" data-close aria-label="Close gallery">✕</button>
+      <div class="modal-grid">
+        <div class="modal-info">
+          <p class="eyebrow" id="kitEyebrow"><span class="tick"></span>Metal Bodykit</p>
+          <h2 class="modal-title" id="kitTitle">Subaru</h2>
+          <div class="modal-desc" id="kitDesc"></div>
+          <ul class="modal-specs" id="kitSpecs"></ul>
+          <a href="#contact" class="btn btn-primary" data-close>Enquire about this kit</a>
+        </div>
+
+        <div class="modal-gallery">
+          <div class="gal-stage">
+            <div class="gal-viewport"><div class="gal-track" id="galTrack" aria-live="polite"></div></div>
+            <button class="gal-nav prev" id="galPrev" aria-label="Previous photo">‹</button>
+            <button class="gal-nav next" id="galNext" aria-label="Next photo">›</button>
+            <span class="gal-counter" id="galCounter">1 / 1</span>
+            <span class="stage-tag" id="kitTag" aria-hidden="true">METAL KIT / 部品</span>
+          </div>
+          <div class="gal-thumbs" id="galThumbs"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="i18n.js"></script>
+</body>
+</html>

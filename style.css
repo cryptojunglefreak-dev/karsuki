@@ -529,6 +529,7 @@ ul { list-style: none; }
 .section-video-tint { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,6,7,0.55), rgba(6,6,7,0.35) 45%, rgba(6,6,7,0.65)); }
 .contact .section-index { z-index: 2; }
 .contact-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.2fr 0.9fr; gap: clamp(36px, 6vw, 80px); align-items: center; }
+.contact-copy .section-title { margin-bottom: clamp(22px, 3vw, 36px); }
 .contact-copy > p.reveal { color: var(--muted-2); max-width: 52ch; margin-bottom: 30px; }
 .contact-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 30px; margin-bottom: 38px; padding-block: 30px; border-block: 1px solid var(--line); }
 .contact-list li { display: flex; flex-direction: column; gap: 6px; }
@@ -579,7 +580,15 @@ ul { list-style: none; }
 }
 @media (max-width: 880px) {
   .nav { display: none; }
-  .menu-toggle { display: block; }
+  .menu-toggle { display: block; order: 3; }
+  /* Two-row header: logos full width on top, language + menu below */
+  .nav-inner { flex-wrap: wrap; row-gap: 14px; }
+  .brand-lockup { order: 1; flex: 1 1 100%; justify-content: space-between; gap: 12px; }
+  .brand-div { display: none; }
+  .brand-logo { height: 30px; }
+  .footer-logo { height: 30px; }
+  .partner-logo, .partner img { height: 27px; }
+  .lang-switch { order: 2; margin-left: 0; }
   .about-grid { grid-template-columns: 1fr; }
   .about-media { max-width: 560px; }
   .about-badge { right: 16px; }

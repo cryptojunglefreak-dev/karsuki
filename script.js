@@ -508,6 +508,7 @@
   "use strict";
   var UP = "https://www.zetongaraz.com/wp-content/uploads/";
   var data = [
+    { img: "7.jpg", cap: "Pressed steel detail" },
     { img: "2026/06/wrc-1.jpg", cap: "WRC widebody, pressed steel" },
     { img: "2025/06/metalbodykit22b.jpg", cap: "22B complete metal kit" },
     { img: "2026/06/0cba216d-e824-4ad9-988a-f9e4cfc1dc02-1024x768.jpeg", cap: "Arches test-fitted" },
@@ -516,9 +517,7 @@
     { img: "2026/06/b3a95954-872e-41d7-b7a5-fd87875ebfc7-1024x576.jpeg", cap: "Panel fitment" },
     { img: "2026/06/745b04f4-f0ec-40e8-8839-29b4def2ad71-1024x606.jpeg", cap: "Steel quarter panel" },
     { img: "6.jpg", cap: "Metal in progress" },
-    { img: "7.jpg", cap: "Pressed steel detail" },
     { img: "8.jpg", cap: "Widebody build" },
-    { img: "9.jpg", cap: "Panel fabrication" },
     { img: "10.jpg", cap: "Steel arches" },
     { img: "11.jpg", cap: "Finished in the metal" }
   ];

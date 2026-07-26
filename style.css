@@ -43,7 +43,10 @@ a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
 .container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
-.section { padding-block: clamp(72px, 11vw, 150px); position: relative; }
+.section { padding-block: clamp(58px, 9vw, 118px); position: relative; }
+/* Keep the Gallery -> Contact gap as it was (only tighten the sections above) */
+.gallery { padding-bottom: clamp(72px, 11vw, 150px); }
+.contact { padding-top: clamp(72px, 11vw, 150px); }
 
 /* ---------- Ambient background (mouse parallax) ---------- */
 .ambient { position: fixed; inset: 0; z-index: -10; overflow: hidden; pointer-events: none; background: #060607; }
@@ -205,7 +208,7 @@ ul { list-style: none; }
 .partner-logo { color: #fff; }
 .footer-brand .partner-logo { height: 22px; }
 /* Lift the Zeton logo so it optically centres with the KARSUKI wordmark (which has a sub-line) */
-.site-header .partner { transform: translateY(-7px); }
+.site-header .partner { transform: translateY(calc(-7px + 4mm)); }
 .brand { display: inline-flex; flex-direction: column; gap: 5px; line-height: 1; }
 .brand-sub {
   font-family: var(--font-body); font-size: 0.58rem; letter-spacing: 0.3em;
@@ -458,9 +461,9 @@ ul { list-style: none; }
 .why-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 12px; background: rgba(211,0,0,0.12); color: var(--red); margin-bottom: 22px; }
 .why-icon svg { width: 26px; height: 26px; }
 .why-card h3 { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.02em; font-size: 1.12rem; font-weight: 600; margin-bottom: 12px; line-height: 1.15; }
-.why-card p { color: var(--muted); font-size: 0.92rem; }
-/* Photo fill behind Why cards (40% opacity, text stays readable) */
-.why-card.has-bg::after { content: ""; position: absolute; inset: 0; z-index: 0; background-image: var(--why-bg); background-size: cover; background-position: center; opacity: 0.4; }
+.why-card p { color: #ccd0d7; font-size: 0.92rem; }
+/* Photo fill behind Why cards (30% opacity, text stays readable) */
+.why-card.has-bg::after { content: ""; position: absolute; inset: 0; z-index: 0; background-image: var(--why-bg); background-size: cover; background-position: center; opacity: 0.3; }
 .why-card.has-bg > * { position: relative; z-index: 1; }
 .why-card::before { z-index: 2; }
 .why-card.has-bg { background: linear-gradient(180deg, rgba(14,15,18,0.72), rgba(10,11,13,0.78)); }
@@ -603,6 +606,7 @@ ul { list-style: none; }
   .brand-logo { height: 30px; }
   .footer-logo { height: 30px; }
   .partner-logo, .partner img { height: 27px; }
+  .site-header .partner { transform: translateY(calc(-7px + 2mm)); }
   .lang-switch { order: 2; margin-left: auto; }
   .about-grid { grid-template-columns: 1fr; }
   .about-media { max-width: 560px; }

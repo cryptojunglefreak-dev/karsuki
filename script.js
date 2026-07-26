@@ -616,7 +616,7 @@
   }
   function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
 
-  if (reduce) { vids[0].loop = true; activate(0); play(vids[0]); return; }
+  /* Always crossfade both clips (even with reduced motion) — the fade uses a CSS transition, not an animation */
 
   function switchTo(i) {
     var nv = vids[i];
@@ -662,18 +662,11 @@
   ];
   var els = imgs.map(function (p, i) {
     var base = p.split("/").pop();
-    var im = document.createElement("img");
-    im.loading = "lazy"; im.decoding = "async"; im.alt = "Subaru 22B build";
-    im.src = "KARSUKI/" + base;
-    (function (remote) {
-      im.addEventListener("error", function once() {
-        im.removeEventListener("error", once);
-        if (im.src !== remote) im.src = remote;
-      });
-    })(UP + p);
-    if (i === 0) im.className = "active";
-    wrap.appendChild(im);
-    return im;
+    var d = document.createElement("div");
+    d.className = "about-slide" + (i === 0 ? " active" : "");
+    d.style.backgroundImage = "url('KARSUKI/" + base + "'), url('" + UP + p + "')";
+    wrap.appendChild(d);
+    return d;
   });
   if (els.length < 2) return;
   var idx = 0;

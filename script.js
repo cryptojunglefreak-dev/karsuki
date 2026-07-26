@@ -351,8 +351,6 @@
         "2026/06/5392d458-39d9-40e4-bc0c-690f16f164ba-1024x549.jpeg",
         "2026/06/0cba216d-e824-4ad9-988a-f9e4cfc1dc02-1024x768.jpeg",
         "2026/06/7f5795f5-9a1d-4921-baae-93a62af5eeb2-1024x731.jpeg",
-        "2026/06/5a67f5fe-d33c-4551-9601-d8b014bc0d7d-1024x686.jpeg",
-        "2026/06/c73d2d39-f429-49d2-a292-fb1781385b49-576x1024.jpeg",
         "2026/06/fb476c1a-5046-4f49-b88e-9cc794a42e1e-1024x709.jpeg",
         "2026/06/45bab6ac-e741-47ba-8a92-e1a3e7a9c117-1024x459.jpeg",
         "2026/06/2339e8d2-c222-4ea8-8234-c5254866be1b-1024x588.jpeg",
@@ -517,7 +515,12 @@
     { img: "2026/06/7f5795f5-9a1d-4921-baae-93a62af5eeb2-1024x731.jpeg", cap: "Rear quarter detail" },
     { img: "2026/06/b3a95954-872e-41d7-b7a5-fd87875ebfc7-1024x576.jpeg", cap: "Panel fitment" },
     { img: "2026/06/745b04f4-f0ec-40e8-8839-29b4def2ad71-1024x606.jpeg", cap: "Steel quarter panel" },
-    { img: "2026/06/5a67f5fe-d33c-4551-9601-d8b014bc0d7d-1024x686.jpeg", cap: "Fabrication" }
+    { img: "6.jpg", cap: "Metal in progress" },
+    { img: "7.jpg", cap: "Pressed steel detail" },
+    { img: "8.jpg", cap: "Widebody build" },
+    { img: "9.jpg", cap: "Panel fabrication" },
+    { img: "10.jpg", cap: "Steel arches" },
+    { img: "11.jpg", cap: "Finished in the metal" }
   ];
 
   var root = document.getElementById("slideshow");

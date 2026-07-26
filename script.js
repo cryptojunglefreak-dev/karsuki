@@ -641,3 +641,45 @@
   activate(0);
   play(vids[0]);
 })();
+
+/* =========================================================
+   "Built for Subaru Purists" — crossfading 22B build gallery (3s)
+   ========================================================= */
+(function () {
+  "use strict";
+  var wrap = document.getElementById("aboutGallery");
+  if (!wrap) return;
+  var UP = "https://www.zetongaraz.com/wp-content/uploads/";
+  var imgs = [
+    "2026/02/WhatsApp-Image-2026-02-13-at-14.40.32-1024x678.jpeg",
+    "2026/02/WhatsApp-Image-2026-02-13-at-14.40.32-1-1024x678.jpeg",
+    "2026/02/WhatsApp-Image-2026-02-13-at-14.40.32-2-1024x678.jpeg",
+    "2026/02/WhatsApp-Image-2026-02-13-at-14.40.32-3-1024x678.jpeg",
+    "2026/02/WhatsApp-Image-2026-02-13-at-14.40.32-4-1024x678.jpeg",
+    "2026/02/WhatsApp-Image-2026-02-13-at-14.40.32-5-1024x678.jpeg",
+    "2026/02/WhatsApp-Image-2026-02-13-at-15.59.13-1024x722.jpeg",
+    "2026/02/634614009_1433716545217169_4881823062694439450_n-768x1024.jpg"
+  ];
+  var els = imgs.map(function (p, i) {
+    var base = p.split("/").pop();
+    var im = document.createElement("img");
+    im.loading = "lazy"; im.decoding = "async"; im.alt = "Subaru 22B build";
+    im.src = "KARSUKI/" + base;
+    (function (remote) {
+      im.addEventListener("error", function once() {
+        im.removeEventListener("error", once);
+        if (im.src !== remote) im.src = remote;
+      });
+    })(UP + p);
+    if (i === 0) im.className = "active";
+    wrap.appendChild(im);
+    return im;
+  });
+  if (els.length < 2) return;
+  var idx = 0;
+  setInterval(function () {
+    els[idx].classList.remove("active");
+    idx = (idx + 1) % els.length;
+    els[idx].classList.add("active");
+  }, 3000);
+})();

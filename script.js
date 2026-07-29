@@ -409,7 +409,7 @@
         "We build it up with premium epoxy resin instead of ordinary polyester, so the part gains better mechanical strength, tighter dimensional accuracy and improved resistance to cracking over time. Every fastener supplied is stainless steel, keeping corrosion away and the service life long.",
         "The wing arrives with its complete stainless mounting set. Any original trim or badges should be reused from your car or sourced separately.",
         "As with all our hand-finished motorsport parts, the spoiler needs a routine test-fit and surface prep before it goes to paint.",
-        "It ships in black, and the final preparation for paint is handled on your side."
+        "It ships in white, and the final preparation for paint is handled on your side."
       ],
       specs: [["Material", "FRP + carbon fibre"], ["Resin", "Epoxy"], ["Hardware", "Stainless steel"], ["Finish", "Shipped in black"]],
       images: [
@@ -428,7 +428,7 @@
         "The body panels, the front fenders and rear quarters, are pressed from 0.8&nbsp;mm Zincore galvanized steel and scanned from an original 22B, with integrated flanges that keep the welds hidden and every line true.",
         "The front and rear bumpers and the rear wing are moulded from FRP composite, reinforced with carbon fibre in the high-stress areas and built up with high-quality epoxy resin for strength and stiffness at a sensible weight. All mounting hardware is stainless steel.",
         "Meshes, indicators and the Subaru emblem are not included and should be transferred from your original parts or bought separately.",
-        "The composite parts ship in black; every piece is hand-finished and needs standard test-fitting and surface preparation before paint, which is carried out on your side."
+        "The composite parts are supplied unpainted, the bumpers in black and the wing in white; every piece is hand-finished and needs standard test-fitting and surface preparation before paint, which is carried out on your side."
       ],
       specs: [["Includes", "Fenders, quarters, bumpers, wing"], ["Panels", "0.8mm Zincore steel"], ["Composite", "FRP + carbon, epoxy"], ["Hardware", "Stainless steel"]],
       images: [

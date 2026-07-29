@@ -375,6 +375,25 @@
         "2026/06/IMG20260611122502-576x1024.jpg",
         "2026/06/IMG20260611122455-576x1024.jpg"
       ]
+    },
+    bumpers: {
+      eyebrow: "Bumpers · 22B",
+      title: "22B Bumpers",
+      tag: "22B BUMPERS / バンパー",
+      desc: [
+        "Our bumpers are made from FRP (Fibreglass Reinforced Plastic) composite, with additional carbon-fibre reinforcement in the areas most exposed to deformation. This gives significantly greater rigidity while keeping the weight sensible.",
+        "They are produced with high-quality epoxy resin, which offers greater mechanical strength, better dimensional stability and higher crack resistance than standard polyester-resin parts. All mounting hardware is stainless steel, for excellent corrosion resistance and a long service life.",
+        "Kit contents: the bumper, fog-light blanks and a complete set of mounts. Meshes, indicators and the Subaru emblem are not included. Transfer them from your original bumper or buy them separately.",
+        "Each bumper is hand-finished and, like most high-quality aftermarket parts for sports cars, needs standard test-fitting and preparation before painting."
+      ],
+      specs: [["Material", "FRP + carbon fibre"], ["Resin", "Epoxy"], ["Hardware", "Stainless steel"], ["In the kit", "Bumper, fog blanks, mounts"]],
+      images: [
+        "bumper1.jpg",
+        "bumper2.jpg",
+        "bumper3.jpg",
+        "bumper4.jpg",
+        "bumper5.jpg"
+      ]
     }
   };
 

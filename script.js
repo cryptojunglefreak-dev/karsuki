@@ -399,6 +399,25 @@
         "bumper8.jpg",
         "bumper9.jpg"
       ]
+    },
+    wing: {
+      eyebrow: "Wing · 22B",
+      title: "22B Wing",
+      tag: "22B WING / ウイング",
+      desc: [
+        "The rear wing is moulded from FRP (Fibreglass Reinforced Plastic), with extra carbon-fibre laid into the highest-stress zones. The result is a noticeably stiffer spoiler that still keeps its mass in check.",
+        "We build it up with premium epoxy resin instead of ordinary polyester, so the part gains better mechanical strength, tighter dimensional accuracy and improved resistance to cracking over time. Every fastener supplied is stainless steel, keeping corrosion away and the service life long.",
+        "The wing arrives with its complete stainless mounting set. Any original trim or badges should be reused from your car or sourced separately.",
+        "As with all our hand-finished motorsport parts, the spoiler needs a routine test-fit and surface prep before it goes to paint.",
+        "It ships in black, and the final preparation for paint is handled on your side."
+      ],
+      specs: [["Material", "FRP + carbon fibre"], ["Resin", "Epoxy"], ["Hardware", "Stainless steel"], ["Finish", "Shipped in black"]],
+      images: [
+        "spoiler1.jpg",
+        "spoiler2.jpg",
+        "spoiler3.jpg",
+        "spoiler4.jpg"
+      ]
     }
   };
 

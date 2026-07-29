@@ -509,18 +509,27 @@
     if (active && active.scrollIntoView) active.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
   }
 
+  // Fill the modal text in the current language (falls back to English from KITS)
+  function fillInfo(id) {
+    var kit = KITS[id];
+    if (!kit) return;
+    var L = window.KARSUKI_LANG || "en";
+    var TR = window.KARSUKI_KITS_I18N;
+    var t = (L !== "en" && TR && TR[L] && TR[L][id]) ? TR[L][id] : null;
+    elEyebrow.innerHTML = '<span class="tick"></span>' + ((t && t.eyebrow) || kit.eyebrow);
+    elTitle.textContent = kit.title;
+    elTag.textContent = kit.tag;
+    var desc = (t && t.desc) || kit.desc;
+    elDesc.innerHTML = desc.map(function (p) { return "<p>" + p + "</p>"; }).join("");
+    var specs = (t && t.specs) || kit.specs;
+    elSpecs.innerHTML = specs.map(function (s) { return "<li><span>" + s[0] + "</span><strong>" + s[1] + "</strong></li>"; }).join("");
+  }
+
   function open(id) {
     var kit = KITS[id];
     if (!kit) return;
-    if (currentId !== id) {
-      currentId = id;
-      elEyebrow.innerHTML = '<span class="tick"></span>' + kit.eyebrow;
-      elTitle.textContent = kit.title;
-      elTag.textContent = kit.tag;
-      elDesc.innerHTML = kit.desc.map(function (p) { return "<p>" + p + "</p>"; }).join("");
-      elSpecs.innerHTML = kit.specs.map(function (s) { return "<li><span>" + s[0] + "</span><strong>" + s[1] + "</strong></li>"; }).join("");
-      buildKit(kit);
-    }
+    fillInfo(id);
+    if (currentId !== id) { currentId = id; buildKit(kit); }
     lastFocus = document.activeElement;
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
@@ -529,6 +538,11 @@
     go(0);
     startAuto();
   }
+
+  // Re-translate the open modal when the language changes
+  document.addEventListener("karsuki:langchange", function () {
+    if (modal.classList.contains("open") && currentId) fillInfo(currentId);
+  });
   function close() {
     stopAuto();
     modal.classList.remove("open");

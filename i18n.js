@@ -211,6 +211,8 @@
     document.querySelectorAll("#langMenu [data-lang]").forEach(function (b) {
       b.setAttribute("aria-selected", b.getAttribute("data-lang") === lang ? "true" : "false");
     });
+    window.KARSUKI_LANG = lang;
+    try { document.dispatchEvent(new CustomEvent("karsuki:langchange", { detail: lang })); } catch (e) {}
     try { localStorage.setItem("karsuki_lang", lang); } catch (e) {}
   }
 

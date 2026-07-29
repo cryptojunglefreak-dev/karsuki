@@ -351,7 +351,8 @@ ul { list-style: none; }
 .card-body p { color: var(--muted); font-size: 0.95rem; }
 
 /* ---------- Featured / clickable product card ---------- */
-.product-card.is-featured { cursor: pointer; outline: none; }
+.product-card.is-featured { cursor: pointer; outline: none; -webkit-user-select: none; user-select: none; }
+.product-card.is-featured * { pointer-events: none; }
 .product-card.is-featured:focus-visible { border-color: var(--red); box-shadow: 0 0 0 3px var(--red-glow); }
 .card-badge {
   position: absolute; top: 14px; left: 14px; z-index: 3;

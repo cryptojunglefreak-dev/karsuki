@@ -418,6 +418,26 @@
         "spoiler3.jpg",
         "spoiler4.jpg"
       ]
+    },
+    fullset: {
+      eyebrow: "Full Set · 22B",
+      title: "22B Full Set",
+      tag: "22B FULL SET / フルセット",
+      desc: [
+        "The 22B Full Set is the complete package: every body panel together with the bumpers and the rear wing, so a single order covers the entire 22B transformation.",
+        "The body panels, the front fenders and rear quarters, are pressed from 0.8&nbsp;mm Zincore galvanized steel and scanned from an original 22B, with integrated flanges that keep the welds hidden and every line true.",
+        "The front and rear bumpers and the rear wing are moulded from FRP composite, reinforced with carbon fibre in the high-stress areas and built up with high-quality epoxy resin for strength and stiffness at a sensible weight. All mounting hardware is stainless steel.",
+        "Meshes, indicators and the Subaru emblem are not included and should be transferred from your original parts or bought separately.",
+        "The composite parts ship in black; every piece is hand-finished and needs standard test-fitting and surface preparation before paint, which is carried out on your side."
+      ],
+      specs: [["Includes", "Fenders, quarters, bumpers, wing"], ["Panels", "0.8mm Zincore steel"], ["Composite", "FRP + carbon, epoxy"], ["Hardware", "Stainless steel"]],
+      images: [
+        "fullset.jpg",
+        "2025/06/metalbodykit22b.jpg",
+        "bumper6.jpg",
+        "spoiler1.jpg",
+        "2026/02/WhatsApp-Image-2026-02-13-at-14.40.32-1024x678.jpeg"
+      ]
     }
   };
 

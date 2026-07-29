@@ -384,15 +384,20 @@
         "Our bumpers are made from FRP (Fibreglass Reinforced Plastic) composite, with additional carbon-fibre reinforcement in the areas most exposed to deformation. This gives significantly greater rigidity while keeping the weight sensible.",
         "They are produced with high-quality epoxy resin, which offers greater mechanical strength, better dimensional stability and higher crack resistance than standard polyester-resin parts. All mounting hardware is stainless steel, for excellent corrosion resistance and a long service life.",
         "Kit contents: the bumper, fog-light blanks and a complete set of mounts. Meshes, indicators and the Subaru emblem are not included. Transfer them from your original bumper or buy them separately.",
-        "Each bumper is hand-finished and, like most high-quality aftermarket parts for sports cars, needs standard test-fitting and preparation before painting."
+        "Each bumper is hand-finished and, like most high-quality aftermarket parts for sports cars, needs standard test-fitting and preparation before painting.",
+        "The bumpers are shipped in black; preparation for painting is carried out on your side."
       ],
       specs: [["Material", "FRP + carbon fibre"], ["Resin", "Epoxy"], ["Hardware", "Stainless steel"], ["In the kit", "Bumper, fog blanks, mounts"]],
       images: [
+        "bumper6.jpg",
         "bumper1.jpg",
         "bumper2.jpg",
         "bumper3.jpg",
         "bumper4.jpg",
-        "bumper5.jpg"
+        "bumper5.jpg",
+        "bumper7.jpg",
+        "bumper8.jpg",
+        "bumper9.jpg"
       ]
     }
   };

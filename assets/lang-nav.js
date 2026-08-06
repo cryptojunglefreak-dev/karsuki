@@ -60,14 +60,22 @@
       return im;
     });
 
+    var strip = g.querySelector(".pg-thumbs");
     var idx = 0, timer = null, paused = false;
     function go(i) {
       idx = (i % n + n) % n;
       layers.forEach(function (l, k) { l.classList.toggle("active", k === idx); });
       thumbs.forEach(function (t, k) { t.classList.toggle("active", k === idx); });
       if (counter) counter.textContent = (idx + 1) + " / " + n;
+      // Center the active thumb by scrolling ONLY the strip horizontally,
+      // never the page (scrollIntoView would jump the whole page while reading).
       var at = thumbs[idx];
-      if (at && at.scrollIntoView) at.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
+      if (strip && at) {
+        var sr = strip.getBoundingClientRect();
+        var tr = at.getBoundingClientRect();
+        var delta = (tr.left - sr.left) - (sr.width / 2 - tr.width / 2);
+        strip.scrollBy({ left: delta, behavior: "smooth" });
+      }
     }
     function tick() { if (!paused) go(idx + 1); }
     function start() { stop(); if (n > 1) timer = setInterval(tick, 3800); }

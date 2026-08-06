@@ -36,19 +36,35 @@ a.product-card { text-decoration: none; color: inherit; display: block; }
 
 .pp-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
-/* Gallery */
+/* ---- Gallery (crossfade stage + thumbnail strip + lightbox) ---- */
 .pg { position: relative; }
-.pg-main { position: relative; border: 1px solid rgba(255,255,255,.12); border-radius: 14px; overflow: hidden; background: #0c0d10; aspect-ratio: 4 / 3; }
+.pg-main { position: relative; border: 1px solid rgba(255,255,255,.12); border-radius: 14px; overflow: hidden; background: #0c0d10; aspect-ratio: 4 / 3; cursor: zoom-in; }
 .pg-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.pg-counter { position: absolute; right: 12px; bottom: 12px; background: rgba(0,0,0,.6); color: #fff; font-family: "Chakra Petch", monospace; font-size: .72rem; letter-spacing: .08em; padding: 4px 10px; border-radius: 999px; }
-.pg-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.45); color: #fff; font-size: 1.5rem; line-height: 1; cursor: pointer; display: grid; place-items: center; transition: background .2s, border-color .2s; }
+/* crossfade layers injected by JS */
+.pg-layer { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s ease; }
+.pg-layer.active { opacity: 1; }
+.pg-main::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 90px 10px rgba(0,0,0,.55); }
+.pg-counter { position: absolute; right: 12px; bottom: 12px; z-index: 3; background: rgba(0,0,0,.6); color: #fff; font-family: "Chakra Petch", monospace; font-size: .72rem; letter-spacing: .08em; padding: 4px 10px; border-radius: 999px; }
+.pg-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.45); color: #fff; font-size: 1.5rem; line-height: 1; cursor: pointer; display: grid; place-items: center; transition: background .2s, border-color .2s; }
 .pg-nav:hover { background: var(--red, #d30000); border-color: var(--red, #d30000); }
 .pg-nav.prev { left: 12px; } .pg-nav.next { right: 12px; }
-.pg-thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 10px; max-height: 220px; overflow-y: auto; padding-right: 2px; }
-.pg-thumb { padding: 0; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; overflow: hidden; background: #0c0d10; cursor: pointer; aspect-ratio: 1 / 1; transition: border-color .2s, opacity .2s; opacity: .72; }
+.pg-thumbs { display: grid; grid-auto-flow: column; grid-auto-columns: 84px; gap: 8px; margin-top: 10px; overflow-x: auto; overflow-y: hidden; padding-bottom: 4px; scroll-behavior: smooth; }
+.pg-thumb { padding: 0; border: 1px solid rgba(255,255,255,.12); border-radius: 8px; overflow: hidden; background: #0c0d10; cursor: pointer; aspect-ratio: 4 / 3; transition: border-color .2s, opacity .2s; opacity: .6; }
 .pg-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .pg-thumb:hover { opacity: 1; }
 .pg-thumb.active { border-color: var(--red, #d30000); opacity: 1; }
+
+/* Lightbox overlay */
+.pglb { position: fixed; inset: 0; z-index: 9999; background: rgba(6,6,8,.94); display: grid; place-items: center; animation: pglbIn .2s ease; }
+@keyframes pglbIn { from { opacity: 0; } to { opacity: 1; } }
+.pglb img { max-width: 92vw; max-height: 86vh; object-fit: contain; border-radius: 6px; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+.pglb-close { position: absolute; top: 22px; right: 26px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.4); color: #fff; font-size: 1.2rem; cursor: pointer; }
+.pglb-close:hover { background: var(--red, #d30000); border-color: var(--red, #d30000); }
+.pglb-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.4); color: #fff; font-size: 1.9rem; line-height: 1; cursor: pointer; display: grid; place-items: center; }
+.pglb-nav:hover { background: var(--red, #d30000); border-color: var(--red, #d30000); }
+.pglb-nav.prev { left: 3vw; } .pglb-nav.next { right: 3vw; }
+.pglb-counter { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); color: #fff; font-family: "Chakra Petch", monospace; font-size: .8rem; letter-spacing: .1em; background: rgba(0,0,0,.5); padding: 6px 14px; border-radius: 999px; }
+@media (max-width: 860px) { .pglb-nav.prev { left: 6px; } .pglb-nav.next { right: 6px; } }
 
 /* Related products */
 .related-head { margin-bottom: 26px; }

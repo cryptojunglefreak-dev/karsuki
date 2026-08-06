@@ -9,6 +9,9 @@ a.product-card { text-decoration: none; color: inherit; display: block; }
 
 /* Sub-page top spacing so content clears the fixed header */
 .subpage { padding-top: clamp(96px, 12vh, 150px); }
+/* Mobile header is two rows (logo, then language + menu), so push content lower */
+@media (max-width: 860px) { .subpage { padding-top: 164px; } }
+@media (max-width: 400px) { .subpage { padding-top: 172px; } }
 
 /* Breadcrumb */
 .breadcrumb { font-family: "Chakra Petch", "Inter", sans-serif; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted, #8a8d94); margin-bottom: 22px; }

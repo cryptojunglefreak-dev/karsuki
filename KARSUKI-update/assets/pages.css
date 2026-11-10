@@ -7,19 +7,38 @@
 /* Links styled as product cards */
 a.product-card { text-decoration: none; color: inherit; display: block; }
 
-/* Price on product cards */
-.card-price { display: block; margin: 10px 0 2px; font-family: "Chakra Petch", "Inter", sans-serif; font-weight: 700; font-size: 1.02rem; letter-spacing: .01em; color: #fff; }
+/* Price + CTA row on product cards */
+.card-foot { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 22px; margin-top: 18px; }
+.card-foot .card-price { margin: 0; font-family: "Chakra Petch", "Inter", sans-serif; font-weight: 800; font-size: 1.32rem; letter-spacing: .01em; color: #fff; }
+.card-foot .card-cta { margin-top: 0; white-space: nowrap; }
 
 /* Price on product pages */
 .product-page .pp-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px 14px; margin: 0 0 22px; }
 .product-page .pp-price .pl { font-family: "Chakra Petch", "Inter", sans-serif; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted, #8a8d94); font-weight: 600; }
-.product-page .pp-price .pv { font-family: "Chakra Petch", "Inter", sans-serif; font-weight: 700; font-size: clamp(1.4rem, 3vw, 1.95rem); color: #fff; }
+.product-page .pp-price .pv { font-family: "Chakra Petch", "Inter", sans-serif; font-weight: 800; font-size: clamp(1.55rem, 3.2vw, 2.1rem); color: #fff; }
 
-/* Sub-page top spacing so content clears the fixed header */
-.subpage { padding-top: clamp(96px, 12vh, 150px); }
+/* ---- Black Friday promo bar (site-wide, fixed above header) ---- */
+:root { --promo-h: 38px; }
+.promo-bar {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--promo-h); z-index: 101;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  background: #09090b; border-bottom: 1px solid rgba(211,0,0,.55);
+  text-decoration: none; font-family: "Chakra Petch", "Inter", sans-serif;
+  text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; line-height: 1;
+}
+.promo-bar .promo-bf { color: #fff; font-weight: 700; }
+.promo-bar .promo-off { color: var(--red, #d30000); font-weight: 800; font-size: .88rem; letter-spacing: .06em; }
+.promo-bar .promo-txt { color: #9a9ea6; font-weight: 600; }
+.promo-bar .promo-sep { width: 5px; height: 5px; border-radius: 50%; background: var(--red, #d30000); }
+/* push the fixed header down below the promo bar */
+.site-header { top: var(--promo-h); }
+@media (max-width: 560px) { :root { --promo-h: 34px; } .promo-bar { gap: 9px; font-size: .66rem; } .promo-bar .promo-txt { display: none; } }
+
+/* Sub-page top spacing so content clears the promo bar + fixed header */
+.subpage { padding-top: calc(clamp(96px, 12vh, 150px) + var(--promo-h)); }
 /* Mobile header is two rows (logo, then language + menu), so push content lower */
-@media (max-width: 860px) { .subpage { padding-top: 164px; } }
-@media (max-width: 400px) { .subpage { padding-top: 172px; } }
+@media (max-width: 860px) { .subpage { padding-top: calc(164px + var(--promo-h)); } }
+@media (max-width: 400px) { .subpage { padding-top: calc(172px + var(--promo-h)); } }
 
 /* Breadcrumb */
 .breadcrumb { font-family: "Chakra Petch", "Inter", sans-serif; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted, #8a8d94); margin-bottom: 22px; }

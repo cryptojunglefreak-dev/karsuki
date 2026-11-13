@@ -10,12 +10,17 @@ a.product-card { text-decoration: none; color: inherit; display: block; }
 /* Price + CTA row on product cards */
 .card-foot { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 22px; margin-top: 18px; }
 .card-foot .card-price { margin: 0; font-family: "Chakra Petch", "Inter", sans-serif; font-weight: 800; font-size: 1.32rem; letter-spacing: .01em; color: #fff; }
+.card-foot .card-price .po { color: var(--muted, #8a8d94); text-decoration: line-through; font-weight: 600; font-size: .92rem; margin-right: 6px; }
+.card-foot .card-price .pn { color: var(--red, #d30000); font-weight: 800; }
 .card-foot .card-cta { margin-top: 0; white-space: nowrap; }
 
 /* Price on product pages */
 .product-page .pp-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px 14px; margin: 0 0 22px; }
 .product-page .pp-price .pl { font-family: "Chakra Petch", "Inter", sans-serif; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted, #8a8d94); font-weight: 600; }
 .product-page .pp-price .pv { font-family: "Chakra Petch", "Inter", sans-serif; font-weight: 800; font-size: clamp(1.55rem, 3.2vw, 2.1rem); color: #fff; }
+.product-page .pp-price .po { font-family: "Chakra Petch", "Inter", sans-serif; color: var(--muted, #8a8d94); text-decoration: line-through; font-weight: 600; font-size: 1.05rem; }
+.product-page .pp-price .pv.sale { color: var(--red, #d30000); }
+.product-page .pp-price .ptag { align-self: center; font-family: "Chakra Petch", "Inter", sans-serif; font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: #fff; background: var(--red, #d30000); padding: 4px 10px; border-radius: 999px; }
 
 /* ---- Black Friday promo bar (site-wide, fixed above header) ---- */
 :root { --promo-h: 38px; }
